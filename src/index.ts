@@ -7,15 +7,27 @@ class Account {
   history: any[];
   accountNumber: string;
 
-  constructor(holder: string, balance: number, history: any[], accountNumber: string = '') {
+  constructor(
+    holder: string,
+    balance: number,
+    history: any[],
+    accountNumber: string = ""
+  ) {
     this.holder = holder;
     this.balance = balance;
     this.history = history;
     this.accountNumber = accountNumber || this.generateAccountNumber();
-  }  
+  }
 
   private generateAccountNumber(): string {
-    return `AC-${Math.floor(Math.random() * 9000000000) + 1000000000}`;
+    const existingAccountNumbers = users.map((user) => user.accountNumber);
+    let accountNumber: string;
+    do {
+      accountNumber = `AC-${
+        Math.floor(Math.random() * 9000000000) + 1000000000
+      }`;
+    } while (existingAccountNumbers.includes(accountNumber));
+    return accountNumber;
   }
 
   toString(): string {
