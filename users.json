@@ -1,0 +1,22 @@
+[
+  {
+    "holder": "ali",
+    "balance": 19700,
+    "history": [
+      "Withdrawn: $100",
+      "Deposited: $20000",
+      "Transferred: $300 to Account AC-3111501967"
+    ],
+    "accountNumber": "AC-6543159273"
+  },
+  {
+    "holder": "ali",
+    "balance": 1300,
+    "history": [
+      "Transferred: $100 to Account AC-3111501967",
+      "Received: $100 from Account AC-3111501967",
+      "Received: $300 from Account AC-6543159273"
+    ],
+    "accountNumber": "AC-3111501967"
+  }
+]
